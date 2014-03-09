@@ -4,28 +4,31 @@ JSDocSnippets
 
 Automatically create JSDoc comments for functions using UltiSnips
 
-==Installation==
+**Installation**
 
-- Ensure that `UltiSnips` is installed.
-- Then install `JSDocSnippets` (this plugin)
+- Ensure that `UltiSnips` is installed, then install `JSDocSnippets` (this plugin) using `Vundle` or `NeoBundle`.
 
-    " Using Vundle
-    Bundle 'SirVer/ultisnips'
-    Bundle 'jordwalke/JSDocSnippets'
 
-    " Or if using NeoBundle(recommended)
-    NeoBundle 'SirVer/ultisnips'
-    NeoBundle 'jordwalke/JSDocSnippets'
+        " Using Vundle
+        Bundle 'SirVer/ultisnips'
+        Bundle 'jordwalke/JSDocSnippets'
+
+        " Or if using NeoBundle(recommended)
+        NeoBundle 'SirVer/ultisnips'
+        NeoBundle 'jordwalke/JSDocSnippets'
 
 - Define your desired keyboard mapping in a `.vimrc` file:
 
-    let g:JSDocSnippetsMapping='<D-C>'
+        let g:JSDocSnippetsMapping='<D-C>'
 
-==Usage==
+
+
+**Usage**
+
+
 
 Assuming the keyboard mapping above, place your cursor on the line immediately
-above any function, and press the keyboard mapping `Command + shift + c` if
-configured as suggested above.
+above any function, and press the keyboard mapping `Command + shift + c`.
 
     var myFunc = function(one, two) {
       // ...
@@ -61,8 +64,11 @@ through all of them as you would with any other snippet.
     }
 
 
-==Support==
-Only tested on MacVim
+
+**Support**
+
+
+Only tested on MacVim, but probably works in other environments. The JSDoc formatting is not customizable yet - pull requests encouraged. This script was simply thrown together to scratch an itch.
 
 These two examples were used as a starting point:
 
