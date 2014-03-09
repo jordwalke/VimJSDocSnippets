@@ -59,26 +59,7 @@ endfunction
 " Example generated snippet.
 " /**\n *\n * @param {${1:varType}} theParam\n * @return $0\n */
 
-" ================= Windows Suggestions ==================:
-" To create a consistent feel between mac os x and windows,
-" install the following in AutoHotkey.ahk
-"
-" ; Vim specific mappings (last #IfWinActive clears the check)
-" ; Open windows spy to see which class is in effect.
-" #IfWinActive ahk_class Vim
-" !=::Send ^{Up} ; For increase font size
-" !-::Send ^{Down} ; For decrease font size
-" !t::F8; For CMD+t equivalent
-" !r::F9; For CMD+r equivalent
-" !+r::F10 ; For CMD+R equivalent
-" !e::F11; For CMD+e equivalent
-" !p::F12; For CMD+p equivalent
-" !c::Send {M-c}
-" !+c::Send +{M-c}
-" #IfWinActive
-"=====================================================
-if has('gui_win32')
-  inoremap <silent> <S-M-c> {<C-R>=UltiSnips#Anon(JSDocSnippetForLineBelow(), '{')<cr>
-else
-  inoremap <silent> <D-C> {<C-R>=UltiSnips#Anon(JSDocSnippetForLineBelow(), '{')<cr>
+if exists('g:JSDocSnippetsMapping')
+  execute 'inoremap <silent> ' . g:JSDocSnippetsMapping . " {<C-R>=UltiSnips#Anon(JSDocSnippetForLineBelow(), '{')<cr>"
 endif
+
