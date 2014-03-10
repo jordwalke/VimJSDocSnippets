@@ -1,4 +1,4 @@
-JSDocSnippets
+VimJSDocSnippets
 =============
 
 
